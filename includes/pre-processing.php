@@ -29,11 +29,6 @@ $iaPesapal = $iaCore->factoryModule('pesapal', 'pesapal', 'common');
 $iaView->iaSmarty->assign('transaction', $transaction);
 //$iaView->iaSmarty->assign('key', $iaStripe->getCredential());
 
-
-var_dump($iaPesapal->getCredentials());
-
-
-
 $content = $iaView->iaSmarty->fetch('module:pesapal/details-form.tpl');
 
 $iaView->title('Pay via PesaPal');

@@ -20,6 +20,11 @@
         <hook name="paymentButtons" type="smarty" filename="button.tpl" page_type="front"><![CDATA[]]></hook>
     </hooks>
 
+    <pages>
+        <page name="pesapal" url="pesapal/" filename="pesapal">Pesapal</page>
+        <page name="callback" url="pesapal/callback/" filename="callback">Pesapal callback</page>
+    </pages>
+
     <phrases>
         <phrase category="frontend" key="pesapal_amount">Amount</phrase>
         <phrase category="frontend" key="pesapal_description">Description</phrase>

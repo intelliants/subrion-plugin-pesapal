@@ -1,7 +1,7 @@
 {ia_print_css files='_IA_URL_modules/pesapal/templates/front/css/style'}
 
 <div id="pesapal-form">
-    <form action="#" method="post" class="form-horizontal">
+    <form action="{$smarty.const.IA_URL}pesapal/" method="post" class="form-horizontal">
         {preventCsrf}
         <div class="form-group">
             <label class="col-sm-4 control-label" for="amount">{lang key='pesapal_amount'} <span class="is-required">*</span></label>
@@ -22,13 +22,13 @@
         <div class="form-group">
             <label class="col-sm-4 control-label" for="first-name">{lang key='pesapal_first_name'} <span class="is-required">*</span></label>
             <div class="col-sm-6">
-                <input type="text" autocomplete="off" class="form-control" id="first-name" name="first-name">
+                <input type="text" autocomplete="off" class="form-control" id="first-name" name="first_name">
             </div>
         </div>
         <div class="form-group">
             <label class="col-sm-4 control-label" for="last-name">{lang key='pesapal_last_name'} <span class="is-required">*</span></label>
             <div class="col-sm-6">
-                <input type="text" autocomplete="off" class="form-control" id="last-name" name="last-name">
+                <input type="text" autocomplete="off" class="form-control" id="last-name" name="last_name">
             </div>
         </div>
         <div class="form-group">
