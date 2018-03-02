@@ -1,4 +1,5 @@
 <?php
+
 /******************************************************************************
  *
  * Subrion - open source content management system
@@ -25,19 +26,28 @@
  ******************************************************************************/
 
 $iaPesapal = $iaCore->factoryModule('pesapal', 'pesapal', 'common');
-$iaUser = $iaCore->factory('users');
 
-$current_user = $iaUser::getIdentity();
+$reference = null;
+$pesapal_tracking_id = null;
 
-$iaView->iaSmarty->assign('transaction', $transaction);
-$iaView->iaSmarty->assign('user_email', $current_user->email);
-$iaView->iaSmarty->assign('user_phone', $current_user->phone);
+if (isset($_GET['pesapal_merchant_reference']) && isset($_GET['pesapal_transaction_tracking_id'])) {
+    $reference = $_GET['pesapal_merchant_reference'];
+    $pesapal_tracking_id = $_GET['pesapal_transaction_tracking_id'];
 
-$content = $iaView->iaSmarty->fetch('module:pesapal/details-form.tpl');
+    $transaction = $temp_transaction;
 
-$iaView->title('Pay via PesaPal');
+    $transaction['reference_id'] = $pesapal_tracking_id;
 
-$iaView->assign('protect', false);
-$iaView->assign('content', $content);
+    $member = $iaUsers->getInfo($transaction['member_id']);
 
-$tplFile = 'page';
+    $order['payment_gross'] = $transaction['amount'];
+    $order['mc_currency'] = $transaction['currency'];
+    $order['payment_date'] = $transaction['date_created'];
+    $order['payment_status'] = iaLanguage::get($transaction['status']);
+    $order['first_name'] = ($member['fullname'] ? $member['fullname'] : $member['username']);
+    $order['last_name'] = '';
+    $order['payer_email'] = $member['email'];
+    $order['txn_id'] = $pesapal_tracking_id;
+
+    $iaView->setMessages(iaLanguage::get('payment_completed'), iaView::SUCCESS);
+}

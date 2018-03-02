@@ -22,7 +22,7 @@
 
     <pages>
         <page name="pesapal" url="pesapal/" filename="pesapal">Pesapal</page>
-        <page name="callback" url="pesapal/callback/" filename="callback">Pesapal callback</page>
+        <page name="ipn_pesapal" url="ipn/pesapal/" service="1" filename="callback">Pesapal IPN service page</page>
     </pages>
 
     <phrases>
@@ -32,5 +32,7 @@
         <phrase category="frontend" key="pesapal_last_name">Last Name</phrase>
         <phrase category="frontend" key="pesapal_email">Email</phrase>
         <phrase category="frontend" key="pesapal_proceed">Proceed</phrase>
+        <phrase category="frontend" key="pesapal_phonenumber">Phone Number</phrase>
+        <phrase category="frontend" key="pesapal_payment_completed">Payment completed</phrase>
     </phrases>
 </module>
