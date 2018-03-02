@@ -2,7 +2,7 @@
 /******************************************************************************
  *
  * Subrion - open source content management system
- * Copyright (C) 2015 Intelliants, LLC <http://www.intelliants.com>
+ * Copyright (C) 2018 Intelliants, LLC <https://intelliants.com>
  *
  * This file is part of Subrion.
  *
@@ -20,7 +20,7 @@
  * along with Subrion. If not, see <http://www.gnu.org/licenses/>.
  *
  *
- * @link http://www.subrion.org/
+ * @link https://subrion.org/
  *
  ******************************************************************************/
 
@@ -35,7 +35,7 @@ $iaView->iaSmarty->assign('user_phone', $current_user->phone);
 
 $content = $iaView->iaSmarty->fetch('module:pesapal/details-form.tpl');
 
-$iaView->title('Pay via PesaPal');
+$iaView->title(iaLanguage::get('pesapal_title'));
 
 $iaView->assign('protect', false);
 $iaView->assign('content', $content);

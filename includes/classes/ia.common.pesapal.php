@@ -90,6 +90,7 @@ class iaPesapal extends abstractCore
         }
 
         $txn = $iaTransaction->getBy('reference_id', $reference_id);
+
         return $iaTransaction->update($transaction, $txn['id']);
     }
 

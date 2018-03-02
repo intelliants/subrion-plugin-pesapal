@@ -11,8 +11,8 @@
 
     <config group="financial" name="pesapal" type="divider">PesaPal</config>
     <config group="financial" name="pesapal_demo_mode" type="radio" description="Demo mode" values="0,1">1</config>
-    <config group="financial" name="pesapal_key_demo" type="text" description="Test Key" show="pesapal_demo_mode|1"><![CDATA[YRnZjJRUP2OiH2lIBK2RkZ4STK6YKLXJ]]></config>
-    <config group="financial" name="pesapal_secret_demo" type="text" description="Test Secret key" show="pesapal_demo_mode|1"><![CDATA[auqAbxqIUmrGMOkbbiV0C/au+nQ=]]></config>
+    <config group="financial" name="pesapal_key_demo" type="text" description="Test Key" show="pesapal_demo_mode|1"><![CDATA[]]></config>
+    <config group="financial" name="pesapal_secret_demo" type="text" description="Test Secret key" show="pesapal_demo_mode|1"><![CDATA[]]></config>
     <config group="financial" name="pesapal_key_live" type="text" description="Live key" show="pesapal_demo_mode|0"><![CDATA[]]></config>
     <config group="financial" name="pesapal_secret_live" type="text" description="Live Secret key" show="pesapal_demo_mode|0"><![CDATA[]]></config>
 
@@ -34,5 +34,6 @@
         <phrase category="frontend" key="pesapal_proceed">Proceed</phrase>
         <phrase category="frontend" key="pesapal_phonenumber">Phone Number</phrase>
         <phrase category="frontend" key="pesapal_payment_completed">Payment completed</phrase>
+        <phrase category="frontend" key="pesapal_title">Pay via PesaPal</phrase>
     </phrases>
 </module>

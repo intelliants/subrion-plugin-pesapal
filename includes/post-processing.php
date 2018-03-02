@@ -1,9 +1,8 @@
 <?php
-
 /******************************************************************************
  *
  * Subrion - open source content management system
- * Copyright (C) 2015 Intelliants, LLC <http://www.intelliants.com>
+ * Copyright (C) 2018 Intelliants, LLC <https://intelliants.com>
  *
  * This file is part of Subrion.
  *
@@ -21,7 +20,7 @@
  * along with Subrion. If not, see <http://www.gnu.org/licenses/>.
  *
  *
- * @link http://www.subrion.org/
+ * @link https://subrion.org/
  *
  ******************************************************************************/
 
@@ -49,5 +48,5 @@ if (isset($_GET['pesapal_merchant_reference']) && isset($_GET['pesapal_transacti
     $order['payer_email'] = $member['email'];
     $order['txn_id'] = $pesapal_tracking_id;
 
-    $iaView->setMessages(iaLanguage::get('payment_completed'), iaView::SUCCESS);
+    $iaView->setMessages(iaLanguage::get('pesapal_payment_completed'), iaView::SUCCESS);
 }
