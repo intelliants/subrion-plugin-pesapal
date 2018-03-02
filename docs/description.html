@@ -1,1 +1,25 @@
 <p>Allows site administrators to accept payments using Pesapal payment gateway.</p>
+
+<h1>IPN</h1>
+<p>So, once you have posted a transaction to PesaPal, how do you find if the payment has competed? Or failed?</p>
+
+<p>PesaPal can send you a notification every time a status change has happened on one of your transactions following which you can query for the status. This is referred to as IPN or Instant Payment Notifications.</p>
+
+<p>Let's take a look at how this works in detail.</p>
+
+<h2>Enable IPN</h2>
+<p>To enable IPN, you need to set the URL at which you will be listening to the PesaPal notifications. To do this, log in to your PesaPal Merchant account, click on the "IPN Settings" menu, and enter the URL.</p>
+
+<ol>
+    <li>Login to pesapal.com</li>
+    <li>click on the "IPN Settings" menu</li>
+    <li>Enter YOUR_SUBRION_SITE_DOMAIN</li>
+    <li>Enter website IPN Listener Url:
+        <p><strong>Notification URL</strong>: http://{YOUR_SUBRION_SITE_URL}/ipn/pesapal/<br><small>(say, http://example.com/ipn/pesapal/ for EXAMPLE.COM domain, respectively)</small></p>
+    </li>
+    <li>Click <em>"Save Url"</em> button</li>
+</ol>
+
+<h1>API Credentials</h1>
+
+<p>Please refer to <a href="http://developer.pesapal.com/how-to-integrate/api-reference" target="_blank">Pesapal documentation</a>.</p>
